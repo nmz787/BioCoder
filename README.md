@@ -15,3 +15,9 @@ We have developed BioCoder, a C++ library that enables biologists to express the
 BioCoder represents the first practical programming system for standardizing and automating biology protocols. Our vision is to change the way that experimental methods are communicated: rather than publishing a written account of the protocols used, researchers will simply publish the code. Our experience suggests that this practice is tractable and offers many benefits. We invite other researchers to leverage BioCoder to improve the precision and completeness of their protocols, and also to adapt and extend BioCoder to new domains.
 
 PMID: 21059251 PMCID: PMC2989930 DOI: 10.1186/1754-1611-4-13
+
+## Compilation
+Requirements (assumes Debian/Ubuntu OS)
+* `sudo apt-get install libncurses5-dev libncursesw5-dev`
+
+`make`
