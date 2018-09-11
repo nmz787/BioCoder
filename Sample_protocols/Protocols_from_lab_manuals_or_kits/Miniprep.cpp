@@ -1,6 +1,6 @@
 #include "BioCoder.h"
 
-void main()
+int main()
 {
 start_protocol("Preparation of Plasmid DNA by Alkaline Lysis with SDS- Minipreparation");
 

@@ -1,7 +1,7 @@
 #include "BioCoder.h"
 #define X 60
 
-void main()
+int main()
 {
 	start_protocol("Blackburn - Yeast Colony PCR");
 

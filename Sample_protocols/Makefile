@@ -1,9 +1,9 @@
 all:
-	cd protoc~1 && $(MAKE) && cd ..
-	cd protoc~2 && $(MAKE) && cd ..
-	cd protoc~3 && $(MAKE) && cd ..
+	cd Protocols_from_lab_manuals_or_kits && $(MAKE) && cd ..
+	cd Protocols_from_OpenWetWare && $(MAKE) && cd ..
+	cd Protocols_from_Published_Papers && $(MAKE) && cd ..
 
 clean:
-	cd protoc~1 && $(MAKE) clean && cd ..
-	cd protoc~2 && $(MAKE) clean && cd ..
-	cd protoc~3 && $(MAKE) clean && cd ..
+	cd Protocols_from_lab_manuals_or_kits && $(MAKE) clean && cd ..
+	cd Protocols_from_OpenWetWare && $(MAKE) clean && cd ..
+	cd Protocols_from_Published_Papers && $(MAKE) clean && cd ..

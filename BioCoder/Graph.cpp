@@ -2,6 +2,7 @@
 #include "Graph.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <cstring>
 
 // the next unique ID that should be assigned to a node
 int MAX_NODE_ID = 0;

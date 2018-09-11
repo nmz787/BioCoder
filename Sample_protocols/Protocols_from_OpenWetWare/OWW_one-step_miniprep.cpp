@@ -1,6 +1,6 @@
 #include "BioCoder.h"
 
-void main()
+int main()
 {
 	start_protocol("One step miniprep method for the isolation of plasmid DNA");
 

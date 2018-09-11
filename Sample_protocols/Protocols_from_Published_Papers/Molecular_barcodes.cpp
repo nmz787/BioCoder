@@ -1,7 +1,7 @@
 #include "BioCoder.h"
 
 
-void main()
+int main()
 {	
 	start_protocol("Methods in Molecular barcodes paper");
 

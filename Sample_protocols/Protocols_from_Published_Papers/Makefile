@@ -1,16 +1,19 @@
-.SUFFIXES: .cpp .exe
+#SRCS = $(wildcard *.cpp)
+SRCS =$(shell find ./ -iname '*.cpp' | sed 's/ /\\ /g')
+TO_DELETE=$(shell find ./ -iname '*.cpp' | sed 's/ /\\ /g'| sed "s/'/\\\'/g" | sed 's/\.cpp//g')
+PROGS = $(patsubst %.cpp,%,$(SRCS))
+CC = g++
+CFLAGS = -I../../BioCoder ../../BioCoder/BioCoder.obj ../../BioCoder/Graph.obj
 
-all: ..\..\BioCoder\BioCoder.obj ..\..\BioCoder\Graph.obj *.cpp
-    @$(MAKE) $(**:.cpp=.exe)
+all: ../../BioCoder/BioCoder.obj ../../BioCoder/Graph.obj $(PROGS)
 
-.cpp.exe:
-	cl -I..\..\BioCoder $< /link /LIBPATH:../../BioCoder BioCoder.obj Graph.obj
+%: %.cpp
+	$(CC) $(CFLAGS) -o "$@" "$<"
+clean: 
+	rm -f $(TO_DELETE)
 
-..\..\BioCoder\BioCoder.obj: ..\..\BioCoder\BioCoder.cpp
-	cl -c -I..\..\BioCoder ..\..\BioCoder\BioCoder.cpp /Fo..\..\BioCoder\BioCoder.obj
+../../BioCoder/BioCoder.obj: ../../BioCoder/BioCoder.cpp
+	g++ -c -I../../BioCoder ../../BioCoder/BioCoder.cpp -o ../../BioCoder/BioCoder.obj
 
-..\..\BioCoder\Graph.obj: ..\..\BioCoder\Graph.cpp
-	cl -c -I..\..\BioCoder ..\..\BioCoder\Graph.cpp /Fo..\..\BioCoder\Graph.obj
-
-clean:
-	del *.obj *.exe ..\..\BioCoder\BioCoder.obj ..\..\BioCoder\Graph.obj
+../../BioCoder/Graph.obj: ../../BioCoder/Graph.cpp
+	g++ -c -I../../BioCoder ../../BioCoder/Graph.cpp -o ../../BioCoder/Graph.obj

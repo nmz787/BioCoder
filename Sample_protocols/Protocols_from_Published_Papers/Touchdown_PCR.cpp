@@ -2,7 +2,7 @@
 
 #define Tm 58
 
-void main()
+int main()
 {
 	start_protocol("Touchdown PCR");
 

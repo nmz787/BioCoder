@@ -1,7 +1,7 @@
 #ifndef __BIOCODER__
 #define __BIOCODER__
 #include <iostream>
-#include <conio.h>
+#include <ncurses.h>
 #include <cstdio>
 #include <fstream>
 #include "Graph.h"

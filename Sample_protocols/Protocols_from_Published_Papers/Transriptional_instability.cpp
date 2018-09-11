@@ -2,7 +2,7 @@
 
 
 //paper "Transcriptional Instability is Not a Universal Attribute of Aging"-Quake et al., Department of Bioengineering, Stanford University.
-void main()
+int main()
 {	
 	start_protocol("Methods in Transcriptional instability paper");
 

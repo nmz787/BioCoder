@@ -5,7 +5,7 @@
 //-Sinclair et al., DOI 10.1016/j.cell.2008.10.025
 Fluid transfect_dna, nam, pbs, chloroform, isopropanol, ethanol, depc_water, rt_primer, rttaq, rtpcr_buffer, te ;
 
-void main()
+int main()
 {
 	start_protocol("Methods in SIRT1 Redistribution");
 

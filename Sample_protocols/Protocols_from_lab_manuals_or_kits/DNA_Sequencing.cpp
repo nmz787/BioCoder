@@ -1,7 +1,7 @@
 #include "BioCoder.h"
 
 
-void main()
+int main()
 {
 	//This protocol has been adapted from Applied Biosystems(TM) Automated DNA Sequencing Guide protocol using BigDye Primer.
 	start_protocol("DNA Sequencing Protocol");
