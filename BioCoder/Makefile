@@ -1,10 +1,10 @@
 all: BioCoder.obj Graph.obj
 
 BioCoder.obj: BioCoder.cpp
-	cl -c -IBioCoder BioCoder.cpp /FoBioCoder.obj
+	g++ -c -IBioCoder BioCoder.cpp -o BioCoder.obj
 
 Graph.obj: Graph.cpp
-	cl -c -IBioCoder Graph.cpp /FoGraph.obj
+	g++ -c -IBioCoder Graph.cpp -o Graph.obj
 
 clean:
-	del BioCoder.obj Graph.obj
+	rm BioCoder.obj Graph.obj
